@@ -1,10 +1,10 @@
 Dependencias 
-npm i bootstrap jquery --save
-npm i angular-imask --save
-npm i currency-formatter --save
-npm i moment --save
-npm i toastr --save
-npm i primeng --save
-npm i primeicons --save
-npm i chart.js --save
+npm i bootstrap jquery 
+npm i angular-imask 
+npm i currency-formatter 
+npm i moment 
+npm i toastr 
+npm i primeng 
+npm i primeicons 
+npm i chart.js 
 npm i angular-in-memory-web-api --save

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError, flatMap } from 'rxjs/operators'
 import { Category } from './category.model';
@@ -21,7 +21,7 @@ export class CategoryService {
     )
   }
 
-  getById(id: number): Observable<Category[]> {
+  getById(id: number): Observable<any> {
     const url = `${this.apiPath}/${id};`;
     return this.http.get(url).pipe(
       catchError(this.handleError),
@@ -29,7 +29,7 @@ export class CategoryService {
     )
   }
 
-  create(category: Category): Observable<Category[]> {
+  create(category: Category): Observable<any> {
     return this.http.post(this.apiPath, category).pipe(
       catchError(this.handleError),
       map(this.jsonDataToCategories)
